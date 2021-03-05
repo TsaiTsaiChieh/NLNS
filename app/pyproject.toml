@@ -8,6 +8,7 @@ authors = ["d0177381@gmail.com"]
 python = "^3.7"
 fastapi = "^0.63.0"
 alembic = "^1.5.5"
+psycopg2-binary = "^2.8.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
