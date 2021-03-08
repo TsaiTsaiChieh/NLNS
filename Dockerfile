@@ -14,4 +14,7 @@ COPY ./app/pyproject.toml ./app/poetry.lock* /app/
 RUN poetry install --no-root --no-dev
 
 COPY ./app /app
+COPY alembic /app/alembic
+COPY alembic.ini /app/alembic.ini
+COPY prestart.sh /app/prestart.sh
 ENV PYTHONPATH=/app
