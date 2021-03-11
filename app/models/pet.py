@@ -19,7 +19,9 @@ class Pet(Base):
         Integer, pet_id_seq, server_default=pet_id_seq.next_value(), primary_key=True
     )
     name = Column(String(128), comment="寵物名")
-    ref = Column(Enum("gov", "map", "own"), nullable=False, comment="資料來源")
+    ref = Column(
+        Enum("gov", "map", "own", name="ref_types"), nullable=False, comment="資料來源"
+    )
     area_id = Column(
         Integer,
         ForeignKey("area.id"),
